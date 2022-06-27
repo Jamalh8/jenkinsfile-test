@@ -13,7 +13,7 @@ pipeline {
                 source venv/bin/activate
                 pip3 install -r requirements.txt
                 pip3 install pytest pytest-cov
-                python3 -m pytest --cov=application'''
+                python3 -m pytest tests/test_app.py --cov=application'''
             }
         }
         stage('Pip install') {
