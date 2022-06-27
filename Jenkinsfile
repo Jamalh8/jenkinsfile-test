@@ -45,8 +45,7 @@ pipeline {
                 echo "exporting environments"
                 export DATABASE_URI='sqlite:///testdb'
                 export MY_KEY=12345
-                JENKINS_NODE_COOKIE=nokill python3 -m gunicorn -D -b  0.0.0.0:5000 -w 4 application:app  -p gunicornpidfile
-                --log-syslog=True'''
+                JENKINS_NODE_COOKIE=nokill python3 -m gunicorn -D -b  0.0.0.0:5000 -w 4 application:app  -p gunicornpidfile --log-syslog=True'''
             }
         }
     }
